@@ -16,7 +16,72 @@
 	flex: 1 1 auto;
 }
 
-.btn{
-	display: inline-block;
-	transition: 0.3s;
+.ibg{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	img{
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.vis-hidd{
+	visibility: hidden;
+}
+
+.title{
+	font-family: Raleway;
+	font-size: 70px;
+	line-height: 70px;
+	font-weight: 700;
+	color: #ffffff;
+	@media (max-width:704px){
+		font-size: 60px;
+	}
+	@media (max-width:545px){
+		font-size: 50px;
+	}
+}
+
+.text{
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: 600;
+	color: #ffffff;
+	@media (max-width:704px){
+		font-size: 15px;
+	}
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	padding: 0px 29px;
+	color: #fff;
+	background-color: #ff5f60;
+	border-radius: 25px;
+	font-family: "Raleway", sans-serif;
+	font-size: 18px;
+	transition: all 0.3s ease 0s;
+	&:hover{
+		background-color: #fc2122;
+	}
+	&:active{
+		background-color: #b03030;
+	}
+}
+.btn-small{
+	font-weight: 400;
+	height: 45px;
+}
+.btn-big {
+	font-weight: 600;
+	height: 50px;
 }

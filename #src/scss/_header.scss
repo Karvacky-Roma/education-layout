@@ -1,4 +1,145 @@
-/*HEADER*/
-.header{
-	
+.header {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	width: 100%;
+	background-color: rgba(112, 19, 254,0.6);
+	// .header__row
+	&__row {
+		min-height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width:700px){
+			min-height: 60px;
+		}
+	}
+	// .header__logoss
+	&__logo {
+		position: relative;
+		z-index: 4;
+	}
+	// .header__nav
+	&__nav {
+		display: flex;
+		align-items: center;
+	}
+	// .header__link
+	&__link {
+		margin: 0px 0px 0px 38px;
+		font-family: "Raleway", sans-serif;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 500;
+		position: relative;
+		padding: 0px 0px 3px 0px;
+		a{
+			color: #fff;
+		}
+		&:last-child{
+			margin: 0;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			display: block;
+			bottom: 0;
+			width: 0;
+			height: 3px;
+			background-color: #ff5f60;
+			transition: all 0.2s ease 0s;
+			border-radius: 2px;
+		}
+		&:hover::before{
+			width: 100%;
+		}
+	}
+	// .header__sign
+	&__sign {
+		padding: 0px 33px;
+		margin: 0px 0px 0px 109px;
+	}
+	// .header__burger
+	&__burger {
+		display: none;
+	}
+}
+
+
+@media (max-width: 744px){
+	.header__burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 5;
+		cursor: pointer;
+		overflow: hidden;
+		&::before,
+		&::after{
+			content: '';
+			position: absolute;
+			height: 2px;
+			left: 0;
+			background-color: #fff;
+			transition: all 0.3s ease 0s;
+		}
+		&::before{
+			top: 0;
+			left: 0;
+			width: 60%;
+		}
+		&::after{
+			width: 60%;
+			bottom: 0;
+			right: 0;
+		}
+		span{
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0px;
+			bottom: 9px;
+			background-color: #fff;
+			transition: all 0.4s ease-in-out 0s;
+		}
+	}
+	.header__burger.header-active::before{
+		transform: rotate(-45deg);
+		top: 9px;
+		width: 100%;
+	}
+	.header__burger.header-active::after{
+		transform: rotate(45deg);
+		bottom: 9px;
+		width: 100%;
+	}
+	.header__burger.header-active span{
+		left: 100%;
+		opacity: 0;
+	}
+	.header__nav{
+		text-align: center;
+		overflow-y: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		align-items: flex-start;
+		display: block;
+		background-color: #183251;
+		padding: 100px 0px 0px 0px;
+		top: -100%;
+		transition: all 0.3s ease 0s;
+		li{
+			margin: 0px 0px 40px 0px;
+		}
+	}
+	.header__nav.header-active{
+		top: 0;
+	}
+	.header__sign{
+		margin: 0;
+	}
 }
