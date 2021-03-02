@@ -1,40 +1,46 @@
-/* Slider */ 
+/* Слайдер */ 
 .slick-slider{} 
-/* Slider started */ 
+/* Слайдер запущен */ 
 .slick-slider.slick-initialized{} 
-/* Dots slider */ 
+/* Слайдер с точками */ 
 .slick-slider.slick-dotted{}
 
 
-/* Bounding shell */ 
-.slick-list {} 
-/* Slide ribbon */ 
-.slick-track{}
+/* Ограничивающая оболочка */ 
+.slick-list {
+	overflow: hidden;
+} 
+/* Лента слайдов */ 
+.slick-track{
+	display: flex;
+	justify-content: center;
+}
 
-/* Slide */ 
-.slick-slide{} 
-/* Active slide (displayed) */ 
+/* Слайд */ 
+.slick-slide{
+} 
+/* Слайд активный (показывается) */ 
 .slick-slide.slick-active{} 
-/* Main slide */ 
+/* Слайд основной */ 
 .slick-slide.slick-current{} 
-/* Center slide */ 
+/* Слайд по центру */ 
 .slick-slide.slick-center{} 
-/* Clon slide */ 
+/* Клонированный слайд */ 
 .slick-slide.slick-cloned{}
 
-/* Arrow */ 
+/* Стрелка */ 
 .slick-arrow{} 
-/* Arrow left */ 
+/* Стрелка влево */ 
 .slick-arrow.slick-prev{} 
-/* Arrow right */ 
+/* Стрелка вправо */ 
 .slick-arrow.slick-next{} 
-/* Arrow inactive */ 
+/* Стрелка не активная */ 
 .slick-arrow.slick-disabled{}
 
-/* Dots */ 
+/* Точки (булиты) */ 
 .slick-dots{} 
 .slick-dots li{} 
-/* Active dots */ 
+/* Активная точка */ 
 .slick-dots li.slick-active{} 
-/* Dots element */ 
+/* Элемент точки */ 
 .slick-dots li button{}

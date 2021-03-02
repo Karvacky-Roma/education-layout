@@ -96,39 +96,48 @@ h6 {
 
 /* FONTS */
 
-/* Slider */
+/* Слайдер */
 
-/* Slider started */
+/* Слайдер запущен */
 
-/* Dots slider */
+/* Слайдер с точками */
 
-/* Bounding shell */
+/* Ограничивающая оболочка */
 
-/* Slide ribbon */
+.slick-list {
+  overflow: hidden;
+}
 
-/* Slide */
+/* Лента слайдов */
 
-/* Active slide (displayed) */
+.slick-track {
+  display: flex;
+  justify-content: center;
+}
 
-/* Main slide */
+/* Слайд */
 
-/* Center slide */
+/* Слайд активный (показывается) */
 
-/* Clon slide */
+/* Слайд основной */
 
-/* Arrow */
+/* Слайд по центру */
 
-/* Arrow left */
+/* Клонированный слайд */
 
-/* Arrow right */
+/* Стрелка */
 
-/* Arrow inactive */
+/* Стрелка влево */
 
-/* Dots */
+/* Стрелка вправо */
 
-/* Active dots */
+/* Стрелка не активная */
 
-/* Dots element */
+/* Точки (булиты) */
+
+/* Активная точка */
+
+/* Элемент точки */
 
 .wrapper {
   width: 100%;
@@ -567,9 +576,69 @@ h6 {
 
 /*FOOTER*/
 
+.footer {
+  margin: 30px 0px 0px 0px;
+}
+
+.footer .container {
+  min-height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  color: #c9c9c9;
+  margin: 0px 20px 0px 0px;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 -10px;
+}
+
+.footer__item {
+  margin: 0px 0px 0px 50px;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.footer__item:first-child {
+  margin: 0;
+}
+
+.footer__item a {
+  color: #c9c9c9;
+}
+
+.footer__item:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #c9c9c9;
+}
+
 @media (max-width: 946px) {
   .education__img {
     display: none;
+  }
+}
+
+@media (max-width: 927px) {
+  .footer__item {
+    margin: 0px 0px 0px 25px;
   }
 }
 
@@ -599,6 +668,27 @@ h6 {
 
   .advantages__col:nth-child(3n) {
     margin: 20px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 815px) {
+  .footer .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer__copyright {
+    margin: 20px 0px 0px 0px;
+    order: 2;
+  }
+
+  .footer__nav {
+    order: 1;
+  }
+
+  .footer__item {
+    margin: 0;
+    padding: 0 10px;
   }
 }
 
