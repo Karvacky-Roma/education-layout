@@ -1,0 +1,22 @@
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container{
+	max-width: $maxWidth+px;
+	margin: 0 auto;
+	padding: 0px 10px;
+}
+
+.content{
+	flex: 1 1 auto;
+}
+
+.btn{
+	display: inline-block;
+	transition: 0.3s;
+}
